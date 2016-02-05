@@ -6,3 +6,11 @@ dependencies:
   override:
     - docker info
     - docker build -t xcv58/ubuntu .
+
+test:
+  override:
+    - docker run -di --name test xcv58/ubuntu
+    - docker ps
+    - docker stop ubuntu
+    - docker start ubuntu
+    - docker stop ubuntu
