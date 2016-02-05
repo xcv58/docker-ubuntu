@@ -11,6 +11,6 @@ test:
   override:
     - docker run -di --name test xcv58/ubuntu
     - docker ps
-    - docker stop ubuntu
-    - docker start ubuntu
-    - docker stop ubuntu
+    - docker stop test
+    - docker start test
+    - docker stop test
